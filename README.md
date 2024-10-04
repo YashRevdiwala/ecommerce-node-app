@@ -55,7 +55,3 @@ To start the production server, run:
 ```bash
 npm start
 ```
-
-## Conclusion
-
-You have successfully set up and started the e-commerce Node.js application.
