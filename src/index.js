@@ -1,12 +1,9 @@
 const express = require("express")
-const dotenv = require("dotenv")
 const routes = require("./routes/")
+const { initEnv } = require("./lib/env")
 const { tokenAuth } = require("./middleware/authToken")
 
-dotenv.config()
-
-const envFileName = `./env/.env.${process.env.NODE_ENV || "development"}`
-dotenv.config({ path: envFileName })
+initEnv()
 
 const app = express()
 

@@ -1,10 +1,7 @@
 const mysql = require("mysql2")
-const dotenv = require("dotenv")
+const { initEnv } = require("./env")
 
-dotenv.config()
-
-const envFileName = `./env/.env.${process.env.NODE_ENV || "development"}`
-dotenv.config({ path: envFileName })
+initEnv()
 
 const connection = mysql.createPool(process.env.DB_URI)
 const promiseConnection = connection.promise()

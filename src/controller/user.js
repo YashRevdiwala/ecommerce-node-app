@@ -15,7 +15,7 @@ const createUser = async (req, res) => {
     const query = createQuery(
       "users(name, email, mobile, password) VALUES(?, ?, ?, ?)"
     )
-    const hashedPassword = encryt(password)
+    const hashedPassword = await encryt(password)
 
     connection.query(
       query,
@@ -46,7 +46,7 @@ const loginUser = async (req, res) => {
       }
       const match = await decrypt(password, rows[0].password)
       if (match) {
-        const userToken = tokenGenerator({ userToken: rows[0].id })
+        const userToken = await tokenGenerator({ userToken: rows[0].id })
         const hashedToken = await encryt(userToken, 7)
 
         res.set("htuid", hashedToken)

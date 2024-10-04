@@ -24,5 +24,4 @@ logs
 
 # Environment variables
 .env*
-env/
 **/src/env/

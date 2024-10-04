@@ -69,6 +69,9 @@ const getProductsByCat = async (req, res) => {
           .status(codes.BadRequest)
           .json({ message: "Product Data not found", error: err })
       }
+      if (rows.length === 0) {
+        return res.status(codes.NotFound).json({ message: "No products found" })
+      }
       return res.status(codes.OK).json({ products: rows })
     })
   } catch (error) {
