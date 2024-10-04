@@ -21,21 +21,13 @@ npm init -y
 
 ### 2. Install Dependencies
 
-Install the necessary dependencies for the project:
+Install the necessary dependencies for the project from package.json:
 
 ```bash
-npm install express mongoose dotenv
+npm install
 ```
 
-### 3. Install Development Dependencies
-
-Install development dependencies such as `nodemon` for automatic server restarts:
-
-```bash
-npm install --save-dev nodemon
-```
-
-### 4. Configure `package.json`
+### 3. Configure `package.json`
 
 Open the `package.json` file and add custom scripts for starting the server and running the development server:
 
