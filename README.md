@@ -11,12 +11,12 @@ This is a simple e-commerce application built with Node.js. This guide will walk
 
 ## Setup
 
-### 1. Initialize the Node.js Project
+### 1. Clone the Node.js Project
 
-Open your terminal and navigate to the project directory. Run the following command to initialize a new Node.js project:
+Open your terminal and navigate to the project directory. Run the following command to clone this Node.js project:
 
 ```bash
-npm init -y
+git clone https://github.com/YashRevdiwala/ecommerce-node-app.git
 ```
 
 ### 2. Install Dependencies
@@ -27,7 +27,7 @@ Install the necessary dependencies for the project from package.json:
 npm install
 ```
 
-### 3. Configure `package.json`
+### 3. Configure `package.json` (Optional)
 
 Open the `package.json` file and add custom scripts for starting the server and running the development server:
 
